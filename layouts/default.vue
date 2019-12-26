@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar fixed app>
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title v-text="title" class="ma-auto" />
     </v-app-bar>
     <v-content>
       <v-container>
@@ -20,10 +20,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.v-application {
-  font-family: Tajawal, Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-</style>
