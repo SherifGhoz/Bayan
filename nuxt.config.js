@@ -22,7 +22,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Tajawal:400,700&display=swap&subset=arabic'
+          'https://fonts.googleapis.com/css2?family=Scheherazade:wght@400;700&family=Tajawal:wght@400;700&display=swap'
       }
     ]
   },
@@ -65,6 +65,9 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
+    defaulyAssets: {
+      icons: 'mdi'
+    },
     treeShake: true,
     customVariables: ['~/assets/variables.scss'],
     rtl: true,
