@@ -25,10 +25,13 @@
 
 <script>
 export default {
-  computed: {
-    activeTab() {
-      return this.$route.name
+  data() {
+    return {
+      activeTab: ''
     }
+  },
+  mounted() {
+    this.activeTab = this.$route.name
   }
 }
 </script>
