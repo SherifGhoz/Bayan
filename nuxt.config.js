@@ -37,11 +37,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['@/plugins/jsonp.js'],
   /*
    ** Nuxt.js dev-modules
-   */
-  buildModules: [
+   */ buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify'
