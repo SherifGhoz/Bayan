@@ -29,7 +29,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
 h1 {
   font-family: Tajawal, Arial, Helvetica, sans-serif;
   font-size: 60px;
