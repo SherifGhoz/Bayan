@@ -82,4 +82,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+::v-deep.v-card,
+::v-deep.v-text-field {
+  font-size: 1.5rem;
+}
+</style>
