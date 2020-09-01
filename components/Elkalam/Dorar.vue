@@ -11,7 +11,7 @@
       clearable
       label="ادخل كلمة من الحديث"
       type="text"
-      single-line=""
+      single-line
     ></v-text-field>
     <v-card
       v-for="(hadith, index) in result"
