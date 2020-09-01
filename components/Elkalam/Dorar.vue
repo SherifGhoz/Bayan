@@ -1,5 +1,7 @@
 <template>
-  <div v-html="result"></div>
+  <div class="pa-8">
+    <div v-html="result"></div>
+  </div>
 </template>
 
 <script>
