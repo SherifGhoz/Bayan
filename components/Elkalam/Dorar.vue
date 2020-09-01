@@ -2,7 +2,7 @@
   <div class="pa-8 text-center">
     <v-text-field
       :value="query"
-      @input="handleSearch"
+      @input="handleSearch($event)"
       @click:clear="clearQuery"
       filled
       outlined
@@ -19,15 +19,25 @@
       v-html="hadith"
       class="pa-4 my-4"
     ></v-card>
-    <v-btn :href="readMoreLink" color="primary" x-large>اقرأ المزيد</v-btn>
+    <v-progress-circular
+      v-if="loading"
+      :size="50"
+      color="primary"
+      indeterminate
+    ></v-progress-circular>
+    <v-btn v-if="result" :href="readMoreLink" color="primary" x-large
+      >اقرأ المزيد</v-btn
+    >
   </div>
 </template>
 
 <script>
+import debounce from 'lodash/debounce'
 export default {
   data() {
     return {
       result: null,
+      loading: false,
       query: ''
     }
   },
@@ -36,25 +46,30 @@ export default {
       return `https://dorar.net/hadith/search?q=${this.query}`
     }
   },
-
   methods: {
-    handleSearch() {
+    handleSearch(val) {
+      this.result = null
+      this.loading = true
+      this.query = val
       this.getData()
-      console.log('sljdnsdjkfn')
     },
-    getData() {
+    getData: debounce(function() {
+      const query = this.query
       this.$jsonp('https://dorar.net/dorar_api.json', {
-        skey: this.query
+        skey: query
       })
         .then((json) => {
           const hadiths = json.ahadith.result.split('--------------')
-          hadiths.pop()
-          this.result = hadiths
+          if (hadiths.length > 1) {
+            hadiths.pop()
+            this.result = hadiths
+          }
         })
         .catch((err) => {
           console.log(err)
         })
-    },
+      this.loading = false
+    }, 300),
     clearQuery() {
       this.query = ''
     }
