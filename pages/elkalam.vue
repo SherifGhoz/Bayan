@@ -4,7 +4,7 @@
       <v-tab>الدرر السنية</v-tab>
       <v-tab>الكلام دا صح؟</v-tab>
     </v-tabs>
-    <v-tabs-items v-model="tab">
+    <v-tabs-items v-model="tab" class="transparent">
       <v-tab-item><Dorar /></v-tab-item>
       <v-tab-item>الكلام دا صح ؟</v-tab-item>
     </v-tabs-items>
