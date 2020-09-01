@@ -25,7 +25,12 @@
       color="primary"
       indeterminate
     ></v-progress-circular>
-    <v-btn v-if="result" :href="readMoreLink" color="primary" x-large
+    <v-btn
+      v-if="result"
+      :href="readMoreLink"
+      target="_blank"
+      color="primary"
+      x-large
       >اقرأ المزيد</v-btn
     >
   </div>
