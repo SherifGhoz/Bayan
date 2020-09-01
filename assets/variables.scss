@@ -10,6 +10,16 @@ $heading-font-family: Scheherazade, Arial, Helvetica, sans-serif;
 
 $font-size-root: 18px;
 
+$btn-font-sizes: (
+  'x-small': 1rem,
+  'small': 1.2rem,
+  'default': 1.3rem,
+  'large': 1.4rem,
+  'x-large': 2rem
+);
+
+$btn-letter-spacing: 0;
+
 $headings: (
   'h1': (
     'size': 6rem,
