@@ -38,7 +38,6 @@ export default {
 
 <style>
 .v-tabs-bar .v-tab > * {
-  font-family: Scheherazade, Arial, Helvetica, sans-serif;
   font-size: 28px;
   margin-bottom: 0 !important;
 }

@@ -35,7 +35,6 @@ h1 {
   font-size: 60px;
 }
 h2 {
-  font-family: Scheherazade, Arial, Helvetica, sans-serif;
   font-size: 60px;
 }
 </style>
