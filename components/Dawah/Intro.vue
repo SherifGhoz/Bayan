@@ -1,20 +1,33 @@
 <template>
-  <v-row>
-    <v-col
-      >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia ea,
-      dolorum impedit doloribus nulla porro sed aperiam optio eveniet suscipit
-      corrupti expedita odio aliquam. Quia corrupti explicabo doloribus vel
-      nihil.</v-col
+  <v-row align="center" justify="space-between">
+    <v-col>
+      <span class="display-1">
+        لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو
+        أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم
+        أد مينيم فينايم,كيواس نوستريد أكسير سيتاشن يللأمكو لابورأس نيسي يت
+        أليكيوب أكس أيا كوممودو كونسيكيوات .
+      </span></v-col
     >
-    <v-col
-      ><v-img src="https://via.placeholder.com/200x200.png?text=coming-soon">
-      </v-img
-    ></v-col>
+    <v-col>
+      <Lottie :options="defaultOptions" :height="300" :width="300" />
+    </v-col>
   </v-row>
 </template>
 
 <script>
-export default {}
+import Lottie from 'vue-lottie'
+import * as animationData from '~/assets/teacher.json'
+
+export default {
+  components: {
+    Lottie
+  },
+  data() {
+    return {
+      defaultOptions: { animationData: animationData.default }
+    }
+  }
+}
 </script>
 
 <style></style>
