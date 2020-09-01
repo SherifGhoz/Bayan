@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style scoped>
-/deep/.v-tab {
+::v-deep.v-tab {
   font-family: Scheherazade, Arial, Helvetica, sans-serif;
   font-size: 3rem;
   font-weight: bold;
